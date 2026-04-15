@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import type { LoadingScreenProps } from "../types/loadingScreen";
+import { withBasePath } from "../utils/withBasePath";
 
 const LoadingScreen: React.FC<LoadingScreenProps> = ({ isVisible }) => {
   return (
@@ -10,7 +11,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ isVisible }) => {
       }`}
     >
       <Image
-        src="/images/logo-company.webp"
+        src={withBasePath("/images/logo.jpeg")}
         width={120}
         height={40}
         priority={true}

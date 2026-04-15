@@ -6,6 +6,7 @@ import NavLink from "./nav/NavLink";
 
 import useSearchModal from "../hooks/useSearchModal";
 import { iconMapping } from "../utils/iconMapping";
+import { withBasePath } from "../utils/withBasePath";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -20,7 +21,7 @@ const Nav: React.FC = () => {
       <div className="flex items-center justify-between">
         <Link href="/" className="flex">
           <Image
-            src="/images/logo-company.webp"
+            src={withBasePath("/images/logo.jpeg")}
             width={90}
             height={40}
             priority={true}

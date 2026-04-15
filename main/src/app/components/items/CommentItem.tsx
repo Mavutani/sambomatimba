@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useAnimatedInView } from "../../hooks/useAnimatedInView";
 import { iconMapping } from "../../utils/iconMapping";
 import type { CommentProps } from "../../types/comment";
+import { withBasePath } from "../../utils/withBasePath";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -38,7 +39,7 @@ const CommentItem: React.FC<CommentProps> = ({
 
       <div className="flex items-center gap-4 lg:gap-5 ml-14 lg:ml-16">
         <Image
-          src={imageSrc}
+          src={withBasePath(imageSrc)}
           alt={`Photo of ${name}`}
           width={65}
           height={65}

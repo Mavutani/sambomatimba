@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { useAnimatedInView } from "../../hooks/useAnimatedInView";
 import { iconMapping } from "../../utils/iconMapping";
 import type { Service } from "../../types/service";
+import { withBasePath } from "../../utils/withBasePath";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -29,7 +30,7 @@ const ServiceItem: React.FC<Service> = ({
     >
       <div className="flex items-center relative group">
         <Image
-          src={imageSrc}
+          src={withBasePath(imageSrc)}
           width={300}
           height={60}
           alt={`Background for ${title}`}

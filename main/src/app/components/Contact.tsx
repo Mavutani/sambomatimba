@@ -4,13 +4,14 @@ import ContactInfo from "./contact/ContactInfo";
 import ContactForm from "./contact/ContactForm";
 
 import { iconMapping } from "../utils/iconMapping";
+import { withBasePath } from "../utils/withBasePath";
 
 const Contact: React.FC = () => {
   const [contactUs, setContactUs] = useState<any[]>([]);
 
   useEffect(() => {
     const fetchContactUs = async () => {
-      const response = await fetch("/data/contactUs.json");
+      const response = await fetch(withBasePath("/data/contactUs.json"));
       const data = await response.json();
 
       setContactUs(data);

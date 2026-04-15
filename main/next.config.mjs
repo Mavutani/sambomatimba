@@ -1,5 +1,16 @@
 const isProd = process.env.NODE_ENV === "production";
 
+const normalizeBasePath = (value) => {
+  if (!value || value === "/") {
+    return "";
+  }
+
+  const trimmed = value.trim().replace(/^\/+|\/+$/g, "");
+  return trimmed ? `/${trimmed}` : "";
+};
+
+const basePath = normalizeBasePath(process.env.NEXT_PUBLIC_BASE_PATH);
+
 const contentSecurityPolicy = [
   "default-src 'self'",
   "base-uri 'self'",
@@ -21,6 +32,7 @@ const contentSecurityPolicy = [
 const nextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
+  basePath,
   images: {
     unoptimized: true,
   },

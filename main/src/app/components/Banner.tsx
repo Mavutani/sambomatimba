@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Typewriter from "./ui/Typewriter";
+import { withBasePath } from "../utils/withBasePath";
 
 const Banner: React.FC = () => {
   const words = [
@@ -14,7 +15,7 @@ const Banner: React.FC = () => {
   return (
     <div className="flex justify-center lg:justify-start items-center">
       <Image
-        src="/images/background-company.webp"
+        src={withBasePath("/images/hero-site.jpeg")}
         width={1000}
         height={667}
         alt="Background Builder Company"
@@ -23,7 +24,7 @@ const Banner: React.FC = () => {
       />
 
       <Image
-        src="/images/background-company-mini.webp"
+        src={withBasePath("/images/hero-site.jpeg")}
         width={230}
         height={110}
         alt="Background Builder Company"

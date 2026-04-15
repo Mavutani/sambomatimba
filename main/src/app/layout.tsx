@@ -8,10 +8,26 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;
 
 const rubik = Rubik({ subsets: ["latin"] });
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.sambomatimba.co.za";
+
+const normalizeBasePath = (value?: string) => {
+  if (!value || value === "/") {
+    return "";
+  }
+
+  const trimmed = value.trim().replace(/^\/+|\/+$/g, "");
+  return trimmed ? `/${trimmed}` : "";
+};
+
+const siteOrigin = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.sambomatimba.co.za").replace(
+  /\/+$/,
+  "",
+);
+const siteBasePath = normalizeBasePath(process.env.NEXT_PUBLIC_BASE_PATH);
+const siteUrl = `${siteOrigin}${siteBasePath}`;
+const withBasePath = (path: string) => `${siteBasePath}${path}`;
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(siteOrigin),
   title: {
     default: "Sambo Matimba Construction & Projects (Pty) Ltd",
     template: "%s | Sambo Matimba Construction & Projects",
@@ -30,7 +46,7 @@ export const metadata: Metadata = {
   creator: "Sambo Matimba Construction & Projects (Pty) Ltd",
   publisher: "Sambo Matimba Construction & Projects (Pty) Ltd",
   alternates: {
-    canonical: "/",
+    canonical: siteBasePath || "/",
   },
   robots: {
     index: true,
@@ -53,7 +69,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/hero-site.jpeg",
+        url: withBasePath("/images/hero-site.jpeg"),
         width: 1280,
         height: 720,
         alt: "Sambo Matimba Construction & Projects site operations",
@@ -65,12 +81,12 @@ export const metadata: Metadata = {
     title: "Sambo Matimba Construction & Projects (Pty) Ltd",
     description:
       "Civil engineering, concrete works, roads, bridges, drainage, buildings and project support from Mokopane, South Africa.",
-    images: ["/images/hero-site.jpeg"],
+    images: [withBasePath("/images/hero-site.jpeg")],
   },
   icons: {
-    icon: "/images/logo.jpeg",
-    shortcut: "/images/logo.jpeg",
-    apple: "/images/logo.jpeg",
+    icon: withBasePath("/images/logo.jpeg"),
+    shortcut: withBasePath("/images/logo.jpeg"),
+    apple: withBasePath("/images/logo.jpeg"),
   },
 };
 

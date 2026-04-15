@@ -3,6 +3,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 import { useAnimatedInView } from "../hooks/useAnimatedInView";
+import { withBasePath } from "../utils/withBasePath";
 
 const AboutUs: React.FC = () => {
   const [ref, controls] = useAnimatedInView({ threshold: 0.3 });
@@ -17,7 +18,7 @@ const AboutUs: React.FC = () => {
       id="aboutus"
     >
       <Image
-        src="/images/about-us-company.webp"
+        src={withBasePath("/images/steel-installation.jpeg")}
         width={800}
         height={120}
         alt="Background Builders"

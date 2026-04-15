@@ -6,6 +6,7 @@ import FooterInfo from "./footer/FooterInfo";
 import useLazyBackground from "../hooks/useLazyBackground";
 import useBackgroundAttachment from "../hooks/useBackgroundAttachment";
 import { iconMapping, IconMappingType } from "../utils/iconMapping";
+import { withBasePath } from "../utils/withBasePath";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -15,7 +16,7 @@ const Footer: React.FC = () => {
 
   useEffect(() => {
     const fetchContactSections = async () => {
-      const response = await fetch("/data/contactFooter.json");
+      const response = await fetch(withBasePath("/data/contactFooter.json"));
       const data = await response.json();
 
       setContactSections(data);
@@ -27,7 +28,7 @@ const Footer: React.FC = () => {
   useLazyBackground([
     {
       id: "background-company-3",
-      imageUrl: "/images/background-company-3.webp",
+      imageUrl: withBasePath("/images/hero-site.jpeg"),
     },
   ]);
 

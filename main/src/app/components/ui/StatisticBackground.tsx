@@ -1,5 +1,6 @@
 import useLazyBackground from "../../hooks/useLazyBackground";
 import useBackgroundAttachment from "../../hooks/useBackgroundAttachment";
+import { withBasePath } from "../../utils/withBasePath";
 
 const StatisticsBackground: React.FC = () => {
   const backgroundAttachment = useBackgroundAttachment();
@@ -7,7 +8,7 @@ const StatisticsBackground: React.FC = () => {
   useLazyBackground([
     {
       id: "background-company-2",
-      imageUrl: "/images/background-company-2.webp",
+      imageUrl: withBasePath("/images/hero-site.jpeg"),
     },
   ]);
 

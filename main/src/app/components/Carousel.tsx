@@ -7,6 +7,7 @@ import CarouselButtonLeft from "./ui/CarouselButtonLeft";
 import CarouselButtonRight from "./ui/CarouselButtonRight";
 import { useCarousel } from "../hooks/useCarousel";
 import { useAnimatedInView } from "../hooks/useAnimatedInView";
+import { withBasePath } from "../utils/withBasePath";
 
 const Carousel: React.FC = () => {
   const [carousel, setCarousel] = useState<any[]>([]);
@@ -16,7 +17,7 @@ const Carousel: React.FC = () => {
 
   useEffect(() => {
     const fetchCarousel = async () => {
-      const response = await fetch("/data/carouselItems.json");
+      const response = await fetch(withBasePath("/data/carouselItems.json"));
       const data = await response.json();
 
       setCarousel(data);

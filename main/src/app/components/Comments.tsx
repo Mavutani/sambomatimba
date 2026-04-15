@@ -4,6 +4,7 @@ import useLazyBackground from "../hooks/useLazyBackground";
 import useBackgroundAttachment from "../hooks/useBackgroundAttachment";
 import CommentItem from "./items/CommentItem";
 import type { CommentProps } from "../types/comment";
+import { withBasePath } from "../utils/withBasePath";
 
 const Comments: React.FC = () => {
   const [comments, setComments] = useState<CommentProps[]>([]);
@@ -11,7 +12,7 @@ const Comments: React.FC = () => {
 
   useEffect(() => {
     const fetchComments = async () => {
-      const response = await fetch("/data/comments.json");
+      const response = await fetch(withBasePath("/data/comments.json"));
       const data = await response.json();
 
       setComments(data);
@@ -21,7 +22,7 @@ const Comments: React.FC = () => {
   }, []);
 
   useLazyBackground([
-    { id: "background-comments", imageUrl: "/images/background-comments.webp" },
+    { id: "background-comments", imageUrl: withBasePath("/images/hero-site.jpeg") },
   ]);
 
   return (

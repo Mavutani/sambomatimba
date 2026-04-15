@@ -2,13 +2,14 @@ import { useEffect, useState } from "react";
 
 import ServiceItem from "./items/ServiceItem";
 import { iconMapping } from "../utils/iconMapping"; // Import the iconMapping from your utility file
+import { withBasePath } from "../utils/withBasePath";
 
 const OurServices: React.FC = () => {
   const [services, setServices] = useState<any[]>([]);
 
   useEffect(() => {
     const fetchServices = async () => {
-      const response = await fetch("/data/services.json");
+      const response = await fetch(withBasePath("/data/services.json"));
       const data = await response.json();
 
       setServices(data);

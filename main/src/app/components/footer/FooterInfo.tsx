@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { withBasePath } from "../../utils/withBasePath";
 
 const FooterInfo: React.FC = () => {
   return (
@@ -9,7 +10,7 @@ const FooterInfo: React.FC = () => {
 
         <Link href="/" className="flex">
           <Image
-            src="/images/logo-company.webp"
+            src={withBasePath("/images/logo.jpeg")}
             width={90}
             height={40}
             alt="Logo Builder Company"

@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import type { CarouselItemProps } from "../../types/carousel";
+import { withBasePath } from "../../utils/withBasePath";
 
 export const CarouselItem: React.FC<CarouselItemProps> = ({
   image,
@@ -14,7 +15,7 @@ export const CarouselItem: React.FC<CarouselItemProps> = ({
     }`}
   >
     <Image
-      src={image}
+      src={withBasePath(image)}
       alt={`Slide ${index + 1}`}
       width={400}
       height={60}
