@@ -33,42 +33,42 @@ const services = [
   {
     title: "Engineering design and planning",
     icon: "faScrewdriver",
-    image: withBasePath("/images/steel-installation.jpeg"),
+    image: withBasePath("/images/steel-installation.jpg"),
     description:
       "Technical coordination, practical design input and buildable planning shaped around site realities.",
   },
   {
     title: "Roads, bridges and pavements",
     icon: "faTractor",
-    image: withBasePath("/images/hero-site.jpeg"),
+    image: withBasePath("/images/hero-site.jpg"),
     description:
       "Construction and maintenance support for transport, access and surface infrastructure across public and private sites.",
   },
   {
     title: "Concrete and reinforcing work",
     icon: "faTrowel",
-    image: withBasePath("/images/drainage-works.jpeg"),
+    image: withBasePath("/images/drainage-works.jpg"),
     description:
       "Reliable delivery for slabs, structural concrete, reinforcing placement and related civil works.",
   },
   {
     title: "Buildings and built environments",
     icon: "faBuilding",
-    image: withBasePath("/images/steel-installation.jpeg"),
+    image: withBasePath("/images/steel-installation.jpg"),
     description:
       "Disciplined site management and construction coordination for physically built environments.",
   },
   {
     title: "Dams, drainage and pipelines",
     icon: "faHelmetSafety",
-    image: withBasePath("/images/channel-infrastructure.jpeg"),
+    image: withBasePath("/images/channel-infrastructure.jpg"),
     description:
       "Civil works for channels, water infrastructure, pipeline installation and site preparation.",
   },
   {
     title: "Supply and project support",
     icon: "faHammer",
-    image: withBasePath("/images/pre-install-prep.jpeg"),
+    image: withBasePath("/images/pre-install-prep.jpg"),
     description:
       "Flexible support for EPCM, lump-sum turnkey management and contract-specific delivery requirements.",
   },
@@ -141,35 +141,35 @@ const projects = [
     title: "Structural steel installation",
     description:
       "Industrial construction activity with steel framing and heavy plant coordination.",
-    image: withBasePath("/images/steel-installation.jpeg"),
+    image: withBasePath("/images/steel-installation.jpg"),
     alt: "Steel structure under construction on an industrial site",
     span: "xl:col-span-7",
   },
   {
     title: "Civil lining works",
     description: "Drainage and concrete channel installation in progress.",
-    image: withBasePath("/images/drainage-works.jpeg"),
+    image: withBasePath("/images/drainage-works.jpg"),
     alt: "Team working inside a block-lined drainage channel",
     span: "xl:col-span-5",
   },
   {
     title: "Channel infrastructure",
     description: "Wide-area concrete and block-lined civil works.",
-    image: withBasePath("/images/channel-infrastructure.jpeg"),
+    image: withBasePath("/images/channel-infrastructure.jpg"),
     alt: "Large drainage channel under construction",
     span: "xl:col-span-4",
   },
   {
     title: "Drainage finishing",
     description: "Final alignment and finishing work on site.",
-    image: withBasePath("/images/channel-finishing.jpeg"),
+    image: withBasePath("/images/channel-finishing.jpg"),
     alt: "Completed drainage channel with finishing work",
     span: "xl:col-span-4",
   },
   {
     title: "Pre-install preparation",
     description: "Drainage components prepared and staged before installation.",
-    image: withBasePath("/images/pre-install-prep.jpeg"),
+    image: withBasePath("/images/pre-install-prep.jpg"),
     alt: "Drainage box units prepared on site",
     span: "xl:col-span-4",
   },
@@ -430,7 +430,7 @@ export default function Home() {
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-3 px-4 py-3 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-10">
           <Link href="/" className="flex items-center gap-3">
             <Image
-              src={withBasePath("/images/logo.jpeg")}
+              src={withBasePath("/images/logo.jpg")}
               alt="Sambo Matimba Construction and Projects logo"
               width={76}
               height={76}
@@ -470,7 +470,7 @@ export default function Home() {
 
       <section className="relative isolate overflow-hidden">
         <Image
-          src={withBasePath("/images/hero-site.jpeg")}
+          src={withBasePath("/images/hero-site.jpg")}
           alt="Construction crew and machinery working on site"
           fill
           priority
@@ -636,7 +636,7 @@ export default function Home() {
           >
             <div className="relative aspect-[4/5] w-full">
               <Image
-                src={withBasePath("/images/channel-infrastructure.jpeg")}
+                src={withBasePath("/images/channel-infrastructure.jpg")}
                 alt="Large block-lined drainage channel under construction"
                 fill
                 sizes="(min-width: 1024px) 38vw, 100vw"
@@ -835,7 +835,7 @@ export default function Home() {
             <div className="mt-8 overflow-hidden rounded-lg border border-white/10">
               <div className="relative aspect-[16/10]">
                 <Image
-                  src={withBasePath("/images/hero-site.jpeg")}
+                  src={withBasePath("/images/hero-site.jpg")}
                   alt="Construction crew operating on an active infrastructure site"
                   fill
                   sizes="(min-width: 1024px) 34vw, 100vw"
@@ -964,7 +964,7 @@ export default function Home() {
             <div className="mt-8 relative overflow-hidden rounded-lg">
               <div className="relative aspect-[16/11]">
                 <Image
-                  src={withBasePath("/images/drainage-works.jpeg")}
+                  src={withBasePath("/images/drainage-works.jpg")}
                   alt="Civil works team inside drainage infrastructure"
                   fill
                   sizes="(min-width: 1024px) 38vw, 100vw"

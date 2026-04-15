@@ -15,7 +15,7 @@ const Banner: React.FC = () => {
   return (
     <div className="flex justify-center lg:justify-start items-center">
       <Image
-        src={withBasePath("/images/hero-site.jpeg")}
+        src={withBasePath("/images/hero-site.jpg")}
         width={1000}
         height={667}
         alt="Background Builder Company"
@@ -24,7 +24,7 @@ const Banner: React.FC = () => {
       />
 
       <Image
-        src={withBasePath("/images/hero-site.jpeg")}
+        src={withBasePath("/images/hero-site.jpg")}
         width={230}
         height={110}
         alt="Background Builder Company"

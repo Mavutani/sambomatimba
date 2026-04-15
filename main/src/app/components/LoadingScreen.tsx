@@ -11,7 +11,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ isVisible }) => {
       }`}
     >
       <Image
-        src={withBasePath("/images/logo.jpeg")}
+        src={withBasePath("/images/logo.jpg")}
         width={120}
         height={40}
         priority={true}

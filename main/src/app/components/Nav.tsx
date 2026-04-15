@@ -21,7 +21,7 @@ const Nav: React.FC = () => {
       <div className="flex items-center justify-between">
         <Link href="/" className="flex">
           <Image
-            src={withBasePath("/images/logo.jpeg")}
+            src={withBasePath("/images/logo.jpg")}
             width={90}
             height={40}
             priority={true}

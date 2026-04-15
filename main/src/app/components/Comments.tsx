@@ -22,7 +22,7 @@ const Comments: React.FC = () => {
   }, []);
 
   useLazyBackground([
-    { id: "background-comments", imageUrl: withBasePath("/images/hero-site.jpeg") },
+    { id: "background-comments", imageUrl: withBasePath("/images/hero-site.jpg") },
   ]);
 
   return (

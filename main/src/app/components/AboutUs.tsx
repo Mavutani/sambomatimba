@@ -18,7 +18,7 @@ const AboutUs: React.FC = () => {
       id="aboutus"
     >
       <Image
-        src={withBasePath("/images/steel-installation.jpeg")}
+        src={withBasePath("/images/steel-installation.jpg")}
         width={800}
         height={120}
         alt="Background Builders"

@@ -10,7 +10,7 @@ const FooterInfo: React.FC = () => {
 
         <Link href="/" className="flex">
           <Image
-            src={withBasePath("/images/logo.jpeg")}
+            src={withBasePath("/images/logo.jpg")}
             width={90}
             height={40}
             alt="Logo Builder Company"

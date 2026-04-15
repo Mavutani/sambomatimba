@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
   useLazyBackground([
     {
       id: "background-company-3",
-      imageUrl: withBasePath("/images/hero-site.jpeg"),
+      imageUrl: withBasePath("/images/hero-site.jpg"),
     },
   ]);
 

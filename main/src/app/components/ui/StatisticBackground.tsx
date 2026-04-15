@@ -8,7 +8,7 @@ const StatisticsBackground: React.FC = () => {
   useLazyBackground([
     {
       id: "background-company-2",
-      imageUrl: withBasePath("/images/hero-site.jpeg"),
+      imageUrl: withBasePath("/images/hero-site.jpg"),
     },
   ]);
 

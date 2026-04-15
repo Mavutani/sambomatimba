@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: withBasePath("/images/hero-site.jpeg"),
+        url: withBasePath("/images/hero-site.jpg"),
         width: 1280,
         height: 720,
         alt: "Sambo Matimba Construction & Projects site operations",
@@ -81,12 +81,12 @@ export const metadata: Metadata = {
     title: "Sambo Matimba Construction & Projects (Pty) Ltd",
     description:
       "Civil engineering, concrete works, roads, bridges, drainage, buildings and project support from Mokopane, South Africa.",
-    images: [withBasePath("/images/hero-site.jpeg")],
+    images: [withBasePath("/images/hero-site.jpg")],
   },
   icons: {
-    icon: withBasePath("/images/logo.jpeg"),
-    shortcut: withBasePath("/images/logo.jpeg"),
-    apple: withBasePath("/images/logo.jpeg"),
+    icon: withBasePath("/images/logo.jpg"),
+    shortcut: withBasePath("/images/logo.jpg"),
+    apple: withBasePath("/images/logo.jpg"),
   },
 };
 
