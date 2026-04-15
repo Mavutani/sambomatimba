@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @apply bg-neutral-950 font-robot text-white antialiased;
+}
+
+h1,
+h2,
+h3,
+nav,
+label,
+button,
+a {
+  @apply font-robot tracking-normal;
+}
+
+p,
+span,
+li,
+dt,
+dd {
+  @apply font-robot tracking-normal;
+}
