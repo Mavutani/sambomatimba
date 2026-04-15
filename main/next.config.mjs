@@ -21,6 +21,9 @@ const contentSecurityPolicy = [
 const nextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
+  images: {
+    unoptimized: true,
+  },
   async headers() {
     return [
       {
